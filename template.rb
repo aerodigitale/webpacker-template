@@ -11,7 +11,7 @@ default_route_and_action = !no?("3/3 Make a default route and application#index 
 gem 'webpacker'
 
 
-lines = <<-CODE
+lines = <<-RUBY
 gem 'turbolinks'
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -21,7 +21,7 @@ gem 'uglifier'
 # gem 'therubyracer', platforms: :ruby
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
-CODE
+RUBY
 
 lines.each_line do |line|
   gsub_file 'Gemfile', Regexp.new(".*#{line}.*"), ''
@@ -77,7 +77,7 @@ after_bundle do
     remove_file 'packs/application.js'
     remove_file 'packs/hello_vue.js'
 
-    file 'application/Styles.css', <<-CODE
+    file 'application/Styles.css', <<-CSS
 html{
   font-family: sans-serif;
 }
@@ -85,7 +85,7 @@ body{
   margin: 0 auto;
   max-width: 1000px;
 }
-CODE
+CSS
 
     file 'packs/application.js', <<-JAVASCRIPT
 /* eslint no-console: 0 */
