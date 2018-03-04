@@ -1,4 +1,4 @@
-# Webpacker+VueJS Rails template
+# Webpack + VueJS Rails template
 
 __What is it about ?__
 
